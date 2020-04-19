@@ -59,6 +59,21 @@
 		},
 		"hypergiant*": {
 			"name": ""
+		},
+		"scorched": {
+			"name": "Scorched"
+		},
+		"frozen": {
+			"name": "Frozen"
+		},
+		"barren": {
+			"name": "Barren"
+		},
+		"telluric": {
+			"name": "Telluric"
+		},
+		"gasGiant": {
+			"name": "Massive Gaseous"
 		}
 	},
 	"objects": {
@@ -406,7 +421,35 @@
 				{
 					"id": "planet",
 					"weight": 30,
-					"props": {}
+					"props": [
+						{
+							"id": "scorched",
+							"chance": 0.2,
+							"ifNot": "dwarf",
+							"excludes": "gasGiant"
+						},
+						{
+							"id": "frozen",
+							"chance": 0.1,
+							"if": "dwarf",
+							"ifNot": "yellow blue",
+							"excludes": "barren"
+						},
+						{
+							"id": "barren",
+							"chance": 0.1,
+							"excludes": "gasGiant"
+						},
+						{
+							"id": "telluric",
+							"chance": 0.7,
+							"excludes": "gasGiant"
+						},
+						{
+							"id": "gasGiant",
+							"chance": 1
+						}
+					]
 				},
 				{
 					"id": "star",
@@ -428,28 +471,8 @@
 							"excludes": "blue"
 						},
 						{
-							"id": "blue",
-							"chance": 1,
-							"excludes": "dwarf"
-						},
-						{
 							"id": "dwarf",
-							"chance": 0.5,
-							"excludes": "giant supergiant hypergiant"
-						},
-						{
-							"id": "giant",
-							"chance": 0.2,
-							"excludes": "supergiant hypergiant"
-						},
-						{
-							"id": "supergiant",
-							"chance": 0.225,
-							"excludes": "hypergiant"
-						},
-						{
-							"id": "hypergiant",
-							"chance": 0.125
+							"chance": 1
 						}
 					]
 				}

@@ -17,6 +17,10 @@ span {
     height: 100%;
 }
 
+#everything {
+    padding: 0;
+}
+
 .closed, .unopened, .open {
     cursor: pointer;
     user-select: none;
