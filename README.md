@@ -22,6 +22,8 @@ JSON structure:
                             * id (string)
                             * chance (number)
                             * excludes (string)
+                            * if (string)
+                            * ifNot (string)
                   * if (string)
                   * ifNot (string)
             * contentsCount (array)
@@ -37,6 +39,8 @@ JSON structure:
                             * id (string)
                             * chance (number)
                             * excludes (string)
+                            * if (string)
+                            * ifNot (string)
                         ...
                     * if (string)
                     * ifNot (string)
