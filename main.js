@@ -98,7 +98,7 @@ function handleChildren(id, parent) {
 					if (e.if) {
 						let t = e.if.split(/\s/);
 						for (let i of t)
-							if (!parentProps.includes(i)) {
+							if (!parentProps.split(" ").includes(i)) {
 								return false;
 								break;
 							}
@@ -107,7 +107,7 @@ function handleChildren(id, parent) {
 					if (e.ifNot) {
 						let t = e.ifNot.split(/\s/);
 						for (let i of t)
-							if (parentProps.includes(i)) {
+							if (parentProps.split(" ").includes(i)) {
 								return false;
 								break;
 							}
@@ -116,7 +116,7 @@ function handleChildren(id, parent) {
 					return true;
 				});
 				for (let j of a) {
-					if (exclude.includes(j.id)) {
+					if (exclude.split(" ").includes(j.id)) {
 						continue;
 					}
 					if (Math.random() < j.chance) {
@@ -136,7 +136,7 @@ function getRandChild(id, parentProps) {
 		if (x.if) {
 			let t = x.if.split(/\s/);
 			for (let i of t)
-				if (!parentProps.includes(i)) {
+				if (!parentProps.split(" ").includes(i)) {
 					return false;
 					break;
 				}
@@ -145,7 +145,7 @@ function getRandChild(id, parentProps) {
 		if (x.ifNot) {
 			let t = x.ifNot.split(/\s/);
 			for (let i of t)
-				if (parentProps.includes(i)) {
+				if (parentProps.split(" ").includes(i)) {
 					return false;
 					break;
 				}
@@ -162,7 +162,7 @@ function testChild(id, parentProps, index) {
 		if (x.if) {
 			let t = x.if.split(/\s/);
 			for (let i of t)
-				if (!parentProps.includes(i)) {
+				if (!parentProps.split(" ").includes(i)) {
 					return false;
 					break;
 				}
@@ -171,7 +171,7 @@ function testChild(id, parentProps, index) {
 		if (x.ifNot) {
 			let t = x.ifNot.split(/\s/);
 			for (let i of t)
-				if (parentProps.includes(i)) {
+				if (parentProps.split(" ").includes(i)) {
 					return false;
 					break;
 				}

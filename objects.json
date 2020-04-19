@@ -118,7 +118,7 @@
 			]
 		},
 		"galaxyWall": {
-			"name": "Galaxy Wall",
+			"name": "Galactic Wall",
 			"contentsCount": [7, 12],
 			"contents": [
 				{
@@ -480,10 +480,113 @@
 		},
 		"star": {
 			"name": "Star",
+			"certainContents": [
+				{
+					"id": "starChromosphere",
+					"count": 1
+				},
+				{
+					"id": "starPhotosphere",
+					"count": 1
+				},
+				{
+					"id": "starRadiativeZone",
+					"count": 1,
+					"if": "giant"
+				},
+				{
+					"id": "starRadiativeZone",
+					"count": 1,
+					"if": "supergiant"
+				},
+				{
+					"id": "starRadiativeZone",
+					"count": 1,
+					"if": "hypergiant"
+				},
+				{
+					"id": "starConvectiveZone",
+					"count": 1
+				},
+				{
+					"id": "starRadiativeZone",
+					"count": 1,
+					"ifNot": "dwarf giant supergiant hypergiant"
+				},
+				{
+					"id": "starCore",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"starChromosphere": {
+			"name": "Stellar Chromosphere",
+			"contentsCount": [0, 0]
+		},
+		"starPhotosphere": {
+			"name": "Stellar Photosphere",
+			"contentsCount": [0, 0]
+		},
+		"starConvectiveZone": {
+			"name": "Stellar Convective Zone",
+			"contentsCount": [0, 0]
+		},
+		"starRadiativeZone": {
+			"name": "Stellar Radiative Zone",
+			"contentsCount": [0, 0]
+		},
+		"starCore": {
+			"name": "Stellar Core",
 			"contentsCount": [0, 0]
 		},
 		"planet": {
 			"name": "Planet",
+			"certainContents": [
+				{
+					"id": "planetAtmosphere",
+					"count": 1
+				},
+				{
+					"id": "planetCrust",
+					"count": 1,
+					"ifNot": "gasGiant"
+				},
+				{
+					"id": "planetMantle",
+					"count": 1,
+					"ifNot": "gasGiant"
+				},
+				{
+					"id": "coldMantle",
+					"count": 1,
+					"if": "gasGiant"
+				},
+				{
+					"id": "planetCore",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"planetAtmosphere": {
+			"name": "Planetary Atmosphere",
+			"contentsCount": [0, 0]
+		},
+		"planetCrust": {
+			"name": "Planetary Crust",
+			"contentsCount": [0, 0]
+		},
+		"planetMantle": {
+			"name": "Planetary Mantle",
+			"contentsCount": [0, 0]
+		},
+		"coldMantle": {
+			"name": "Planetary Mantle",
+			"contentsCount": [0, 0]
+		},
+		"planetCore": {
+			"name": "Planetary Core",
 			"contentsCount": [0, 0]
 		},
 		"hypervoid": {
