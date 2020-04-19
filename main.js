@@ -8,7 +8,7 @@ function init() {
 			prop = json.properties;
 			document.body.innerHTML = "";
 			createBase();
-			createNode("galaxy");
+			createNode("universe");
 			return json;
 		});
 	// .then(json => console.log(json));

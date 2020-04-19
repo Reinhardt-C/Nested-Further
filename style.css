@@ -3,8 +3,8 @@ ul {
 }
 
 li {
-    background-color: red;
-    border: black 2px solid;
+    background-color: silver;
+    border: grey 2px solid;
 }
 
 .closed, .unopened, .open {

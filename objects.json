@@ -275,42 +275,42 @@
 					"weight": 1,
 					"props": [
 						{
-							"id": "red2",
+							"id": "red*",
 							"chance": 0.7,
-							"excludes": "yellow2 white2 blue2"
+							"excludes": "yellow* white* blue*"
 						},
 						{
-							"id": "yellow2",
+							"id": "yellow*",
 							"chance": 0.33,
-							"excludes": "white2 blue2"
+							"excludes": "white* blue*"
 						},
 						{
-							"id": "white2",
+							"id": "white*",
 							"chance": 0.6,
-							"excludes": "blue2"
+							"excludes": "blue*"
 						},
 						{
-							"id": "blue2",
+							"id": "blue*",
 							"chance": 1,
-							"excludes": "dwarf2"
+							"excludes": "dwarf*"
 						},
 						{
-							"id": "dwarf2",
+							"id": "dwarf*",
 							"chance": 0.5,
-							"excludes": "giant2 supergiant2 hypergiant2"
+							"excludes": "giant* supergiant* hypergiant*"
 						},
 						{
-							"id": "giant2",
+							"id": "giant*",
 							"chance": 0.2,
-							"excludes": "supergiant2 hypergiant2"
+							"excludes": "supergiant* hypergiant*"
 						},
 						{
-							"id": "supergiant2",
+							"id": "supergiant*",
 							"chance": 0.225,
-							"excludes": "hypergiant2"
+							"excludes": "hypergiant*"
 						},
 						{
-							"id": "hypergiant2",
+							"id": "hypergiant*",
 							"chance": 0.125
 						}
 					]
