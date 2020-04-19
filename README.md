@@ -16,6 +16,7 @@ JSON structure:
                * 0 (object)
                   * id (string)
                   * count (number)
+                  * parentProps (boolean)
                   * props (array)
                         * 0 (object)
                             * id (string)
@@ -30,6 +31,7 @@ JSON structure:
                 * 0 (object)
                     * id (string)
                     * weight (number)
+                    * parentProps (boolean)
                     * props (array)
                         * 0 (object)
                             * id (string)
@@ -40,3 +42,6 @@ JSON structure:
                     * ifNot (string)
                 ...
         ...
+        
+The parentProps boolean will copy all properties from the parent (e.g. a red giant star system -> red giant star) though it also removes
+asterisks to allow for invisible properties on parents (e.g. red* giant* star system (with red* and giant* having "" for names) -> red giant star).
