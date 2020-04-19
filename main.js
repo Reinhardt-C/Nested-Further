@@ -60,27 +60,30 @@ function createNode(id, parent = "everything", props = "") {
 
 function handleChildren(id, parent) {
 	let num = randBetween(obj[id].contentsCount[0], obj[id].contentsCount[1]);
+	let parentProps = $("s" + parent).getAttribute("data-props");
 	if (obj[id].certainContents) {
-		for (let i of obj[id].certainContents) {
-			for (let j = 0; j < i.count; j++) {
-				let pstr = "";
-				let exclude = "";
-				if (i.props) {
-					for (let j of i.props) {
-						let end = false;
-						if (exclude.includes(j.id)) {
-							end = true;
-							break;
-						}
-						if (end) continue;
-						if (Math.random() < j.chance) {
-							exclude += (exclude.length > 0 ? " " : "") + j.excludes;
-							pstr += (pstr.length > 0 ? " " : "") + j.id;
+		for (let k in obj[id].certainContents) {
+			let i = obj[id].certainContents[k];
+			if (testChild(id, parentProps, k))
+				for (let j = 0; j < i.count; j++) {
+					let pstr = "";
+					let exclude = "";
+					if (i.props) {
+						for (let j of i.props) {
+							let end = false;
+							if (exclude.includes(j.id)) {
+								end = true;
+								break;
+							}
+							if (end) continue;
+							if (Math.random() < j.chance) {
+								exclude += (exclude.length > 0 ? " " : "") + j.excludes;
+								pstr += (pstr.length > 0 ? " " : "") + j.id;
+							}
 						}
 					}
+					createNode(i.id, parent, pstr || "");
 				}
-				createNode(i.id, parent, pstr || "");
-			}
 		}
 	}
 	// console.log($("s" + parent).getAttribute("data-props"));
@@ -89,21 +92,23 @@ function handleChildren(id, parent) {
 		let x = getRandChild(id, parentProps);
 		let pstr = "";
 		let exclude = "";
-		if (x.props) {
-			for (let j of x.props) {
-				let end = false;
-				if (exclude.includes(j.id)) {
-					end = true;
-					break;
-				}
-				if (end) continue;
-				if (Math.random() < j.chance) {
-					exclude += (exclude.length > 0 ? " " : "") + j.excludes;
-					pstr += (pstr.length > 0 ? " " : "") + j.id;
+		if (x) {
+			if (x.props) {
+				for (let j of x.props) {
+					let end = false;
+					if (exclude.includes(j.id)) {
+						end = true;
+						break;
+					}
+					if (end) continue;
+					if (Math.random() < j.chance) {
+						exclude += (exclude.length > 0 ? " " : "") + j.excludes;
+						pstr += (pstr.length > 0 ? " " : "") + j.id;
+					}
 				}
 			}
+			createNode(x.id, parent, pstr || "");
 		}
-		createNode(x.id, parent, pstr || "");
 	}
 }
 
@@ -131,6 +136,32 @@ function getRandChild(id, parentProps) {
 		return true;
 	});
 	return chooseWeighted(a);
+}
+
+function testChild(id, parentProps, index) {
+	let a = obj[id].certainContents;
+	a = a.map(x => {
+		if (x.if) {
+			let t = x.if.split(/\s/);
+			for (let i of t)
+				if (!parentProps.includes(i)) {
+					return false;
+					break;
+				}
+			return x;
+		}
+		if (x.ifNot) {
+			let t = x.ifNot.split(/\s/);
+			for (let i of t)
+				if (parentProps.includes(i)) {
+					return false;
+					break;
+				}
+			return x;
+		}
+		return x;
+	});
+	return a[index] !== false;
 }
 
 function chooseWeighted(items) {
