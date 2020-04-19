@@ -2,6 +2,11 @@ ul {
     list-style-type: none;
 }
 
+li {
+    background-color: red;
+    border: black 2px solid;
+}
+
 .closed, .unopened, .open {
     cursor: pointer;
     user-select: none;

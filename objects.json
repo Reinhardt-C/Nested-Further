@@ -1,19 +1,424 @@
 {
-    "properties": {
-    },
-    "objects": {
-        "universe": {
-            "id": "universe",
-            "name": "Universe",
-            "certainContents": [
-            ],
-            "contentsCount": [1, 1],
-            "contents": [
-                {
-                    "id": "universe",
-                    "weight": 10
-                }
-            ]
-        }
-    }
+	"properties": {
+		"spiral": {
+			"name": "Spiral"
+		},
+		"elliptical": {
+			"name": "Elliptical"
+		},
+		"irregular": {
+			"name": "Irregular"
+		},
+		"lenticular": {
+			"name": "Lenticular"
+		},
+		"red": {
+			"name": "Red"
+		},
+		"yellow": {
+			"name": "Yellow"
+		},
+		"white": {
+			"name": "White"
+		},
+		"blue": {
+			"name": "Blue"
+		},
+		"dwarf": {
+			"name": "Dwarf"
+		},
+		"giant": {
+			"name": "Giant"
+		},
+		"supergiant": {
+			"name": "Supergiant"
+		},
+		"hypergiant": {
+			"name": "Hypergiant"
+		},
+		"red*": {
+			"name": ""
+		},
+		"yellow*": {
+			"name": ""
+		},
+		"white*": {
+			"name": ""
+		},
+		"blue*": {
+			"name": ""
+		},
+		"dwarf*": {
+			"name": ""
+		},
+		"giant*": {
+			"name": ""
+		},
+		"supergiant*": {
+			"name": ""
+		},
+		"hypergiant*": {
+			"name": ""
+		}
+	},
+	"objects": {
+		"universe": {
+			"name": "Universe",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "galaxyFilament",
+					"weight": 10
+				},
+				{
+					"id": "galaxyWall",
+					"weight": 7
+				},
+				{
+					"id": "galacticHypercluster",
+					"weight": 1
+				},
+				{
+					"id": "hypervoid",
+					"weight": 1
+				}
+			]
+		},
+		"galaxyFilament": {
+			"name": "Galaxy Filament",
+			"contentsCount": [5, 9],
+			"contents": [
+				{
+					"id": "galacticHypercluster",
+					"weight": 10
+				},
+				{
+					"id": "galacticSupercluster",
+					"weight": 1
+				},
+				{
+					"id": "hypervoid",
+					"weight": 1
+				}
+			]
+		},
+		"galaxyWall": {
+			"name": "Galaxy Wall",
+			"contentsCount": [7, 12],
+			"contents": [
+				{
+					"id": "galacticHypercluster",
+					"weight": 20
+				},
+				{
+					"id": "galacticSupercluster",
+					"weight": 2
+				},
+				{
+					"id": "hypervoid",
+					"weight": 1
+				}
+			]
+		},
+		"galacticHypercluster": {
+			"name": "Galactic Hypercluster",
+			"contentsCount": [4, 8],
+			"contents": [
+				{
+					"id": "galacticSupercluster",
+					"weight": 5
+				},
+				{
+					"id": "galacticCluster",
+					"weight": 1
+				},
+				{
+					"id": "supervoid",
+					"weight": 1
+				}
+			]
+		},
+		"galacticSupercluster": {
+			"name": "Galactic Supercluster",
+			"contentsCount": [4, 8],
+			"contents": [
+				{
+					"id": "galacticCluster",
+					"weight": 5
+				},
+				{
+					"id": "void",
+					"weight": 1
+				}
+			]
+		},
+		"galacticCluster": {
+			"name": "Galactic Cluster",
+			"contentsCount": [6, 10],
+			"contents": [
+				{
+					"id": "galacticGroup",
+					"weight": 5
+				}
+			]
+		},
+		"galacticGroup": {
+			"name": "Galactic Group",
+			"contentsCount": [6, 10],
+			"contents": [
+				{
+					"id": "galaxy",
+					"weight": 1,
+					"props": [
+						{
+							"id": "spiral",
+							"chance": 0.4,
+							"excludes": "elliptical irregular lenticular"
+						},
+						{
+							"id": "elliptical",
+							"chance": 0.6,
+							"excludes": " irregular lenticular"
+						},
+						{
+							"id": "irregular",
+							"chance": 0.7,
+							"excludes": " lenticular"
+						},
+						{
+							"id": "lenticular",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"galaxy": {
+			"name": "Galaxy",
+			"certainContents": [
+				{
+					"id": "galacticCenter",
+					"count": 1
+				}
+			],
+			"contentsCount": [6, 8],
+			"contents": [
+				{
+					"id": "galacticArm",
+					"weight": 5,
+					"if": "spiral"
+				},
+				{
+					"id": "stellarBubble",
+					"weight": 5,
+					"ifNot": "spiral"
+				}
+			]
+		},
+		"galacticCenter": {
+			"name": "Galactic Center",
+			"certainContents": [
+				{
+					"id": "blackHole",
+					"count": 1
+				}
+			],
+			"contentsCount": [4, 7],
+			"contents": [
+				{
+					"id": "star",
+					"weight": 3,
+					"props": [
+						{
+							"id": "red",
+							"chance": 0.7,
+							"excludes": "yellow white blue"
+						},
+						{
+							"id": "yellow",
+							"chance": 0.33,
+							"excludes": "white blue"
+						},
+						{
+							"id": "white",
+							"chance": 0.6,
+							"excludes": "blue"
+						},
+						{
+							"id": "blue",
+							"chance": 1,
+							"excludes": "dwarf"
+						},
+						{
+							"id": "dwarf",
+							"chance": 0.5,
+							"excludes": "giant supergiant hypergiant"
+						},
+						{
+							"id": "giant",
+							"chance": 0.4,
+							"excludes": "supergiant hypergiant"
+						},
+						{
+							"id": "supergiant",
+							"chance": 0.225,
+							"excludes": "hypergiant"
+						},
+						{
+							"id": "hypergiant",
+							"chance": 0.125
+						}
+					]
+				},
+				{
+					"id": "starSystem",
+					"weight": 1,
+					"props": [
+						{
+							"id": "red2",
+							"chance": 0.7,
+							"excludes": "yellow2 white2 blue2"
+						},
+						{
+							"id": "yellow2",
+							"chance": 0.33,
+							"excludes": "white2 blue2"
+						},
+						{
+							"id": "white2",
+							"chance": 0.6,
+							"excludes": "blue2"
+						},
+						{
+							"id": "blue2",
+							"chance": 1,
+							"excludes": "dwarf2"
+						},
+						{
+							"id": "dwarf2",
+							"chance": 0.5,
+							"excludes": "giant2 supergiant2 hypergiant2"
+						},
+						{
+							"id": "giant2",
+							"chance": 0.2,
+							"excludes": "supergiant2 hypergiant2"
+						},
+						{
+							"id": "supergiant2",
+							"chance": 0.225,
+							"excludes": "hypergiant2"
+						},
+						{
+							"id": "hypergiant2",
+							"chance": 0.125
+						}
+					]
+				}
+			]
+		},
+		"blackHole": {
+			"name": "Black Hole",
+			"contentsCount": [0, 0]
+		},
+		"galacticArm": {
+			"name": "Galactic Arm",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "stellarBubble",
+					"weight": 10
+				}
+			]
+		},
+		"stellarBubble": {
+			"name": "Stellar Bubble",
+			"contentsCount": [2, 4],
+			"contents": [
+				{
+					"id": "stellarCloud",
+					"weight": 10
+				}
+			]
+		},
+		"stellarCloud": {
+			"name": "Stellar Cloud",
+			"contentsCount": [4, 7],
+			"contents": [
+				{
+					"id": "starSystem",
+					"weight": 10,
+					"props": [
+						{
+							"id": "red*",
+							"chance": 0.7,
+							"excludes": "yellow* white* blue*"
+						},
+						{
+							"id": "yellow*",
+							"chance": 0.33,
+							"excludes": "white* blue*"
+						},
+						{
+							"id": "white*",
+							"chance": 0.6,
+							"excludes": "blue*"
+						},
+						{
+							"id": "blue*",
+							"chance": 1,
+							"excludes": "dwarf*"
+						},
+						{
+							"id": "dwarf*",
+							"chance": 0.5,
+							"excludes": "giant* supergiant* hypergiant*"
+						},
+						{
+							"id": "giant*",
+							"chance": 0.2,
+							"excludes": "supergiant* hypergiant*"
+						},
+						{
+							"id": "supergiant*",
+							"chance": 0.225,
+							"excludes": "hypergiant*"
+						},
+						{
+							"id": "hypergiant*",
+							"chance": 0.125
+						}
+					]
+				}
+			]
+		},
+		"starSystem": {
+			"name": "Star System",
+			"certainContents": [
+				{
+					"id": "star",
+					"count": 1,
+					"parentProps": true
+				}
+			],
+			"contentsCount": [0, 0],
+			"contents": []
+		},
+		"star": {
+			"name": "Star",
+			"contentsCount": [0, 0]
+		},
+		"hypervoid": {
+			"name": "Hypervoid",
+			"contentsCount": [0, 0]
+		},
+		"supervoid": {
+			"name": "Supervoid",
+			"contentsCount": [0, 0]
+		},
+		"void": {
+			"name": "Void",
+			"contentsCount": [0, 0]
+		}
+	}
 }

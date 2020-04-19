@@ -8,7 +8,7 @@ function init() {
 			prop = json.properties;
 			document.body.innerHTML = "";
 			createBase();
-			createNode("universe");
+			createNode("galaxy");
 			return json;
 		});
 	// .then(json => console.log(json));
@@ -68,14 +68,12 @@ function handleChildren(id, parent) {
 				for (let j = 0; j < i.count; j++) {
 					let pstr = "";
 					let exclude = "";
-					if (i.props) {
+					if (i.parentProps) pstr = parentProps.replace(/\*/g, "");
+					else if (i.props) {
 						for (let j of i.props) {
-							let end = false;
 							if (exclude.includes(j.id)) {
-								end = true;
-								break;
+								continue;
 							}
-							if (end) continue;
 							if (Math.random() < j.chance) {
 								exclude += (exclude.length > 0 ? " " : "") + j.excludes;
 								pstr += (pstr.length > 0 ? " " : "") + j.id;
@@ -93,14 +91,12 @@ function handleChildren(id, parent) {
 		let pstr = "";
 		let exclude = "";
 		if (x) {
-			if (x.props) {
+			if (i.parentProps) pstr = parentProps.replace(/\*/g, "");
+			else if (x.props) {
 				for (let j of x.props) {
-					let end = false;
 					if (exclude.includes(j.id)) {
-						end = true;
-						break;
+						continue;
 					}
-					if (end) continue;
 					if (Math.random() < j.chance) {
 						exclude += (exclude.length > 0 ? " " : "") + j.excludes;
 						pstr += (pstr.length > 0 ? " " : "") + j.id;
