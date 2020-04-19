@@ -1,0 +1,27 @@
+ul {
+    list-style-type: none;
+}
+
+.closed, .unopened, .open {
+    cursor: pointer;
+    user-select: none;
+}
+
+.closed::before, .unopened::before, .open::before {
+    content: "+";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.open::before {
+    content: "-";
+}
+
+.nested {
+    display: none;
+}
+
+.active {
+    display: block;
+}
