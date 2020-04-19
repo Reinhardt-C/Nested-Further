@@ -1,0 +1,42 @@
+{
+    "properties": {
+        "exampleProp": {
+            "id": "exampleProp",
+            "name": "Example Property"
+        },
+        "exampleProp2": {
+            "id": "exampleProp2",
+            "name": "Second Example Property"
+        }
+    },
+    "objects": {
+        "exampleObject": {
+            "id": "exampleObject",
+            "name": "Example Object",
+            "certainContents": [
+                {
+                    "id": "exampleObject",
+                    "count": 2
+                }
+            ],
+            "contentsCount": [1, 4],
+            "contents": [
+                {
+                    "id": "exampleObject",
+                    "weight": 10,
+                    "props": [
+                        {
+                            "id": "exampleProp",
+                            "chance": 0.2,
+                            "excludes": "exampleProp2"
+                        },
+                        {
+                            "id": "exampleProp2",
+                            "chance": 0.4
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

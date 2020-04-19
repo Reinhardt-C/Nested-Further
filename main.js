@@ -60,30 +60,33 @@ function createNode(id, parent = "everything", props = "") {
 
 function handleChildren(id, parent) {
 	let num = randBetween(obj[id].contentsCount[0], obj[id].contentsCount[1]);
+	if (obj[id].certainContents) {
+		for (let i of obj[id].certainContents) {
+			for (let j = 0; j < i.count; j++) {
+				let pstr = "";
+				let exclude = "";
+				if (i.props) {
+					for (let j of i.props) {
+						let end = false;
+						if (exclude.includes(j.id)) {
+							end = true;
+							break;
+						}
+						if (end) continue;
+						if (Math.random() < j.chance) {
+							exclude += (exclude.length > 0 ? " " : "") + j.excludes;
+							pstr += (pstr.length > 0 ? " " : "") + j.id;
+						}
+					}
+				}
+				createNode(i.id, parent, pstr || "");
+			}
+		}
+	}
 	// console.log($("s" + parent).getAttribute("data-props"));
 	for (let i = 0; i < num; i++) {
 		let parentProps = $("s" + parent).getAttribute("data-props");
 		let x = getRandChild(id, parentProps);
-		// if (x.if) {
-		// 	let t = x.if.split(/\s/);
-		// 	let end = false;
-		// 	for (let i of t)
-		// 		if (!parentProps.includes(i)) {
-		// 			end = true;
-		// 			break;
-		// 		}
-		// 	if (end) continue;
-		// }
-		// if (x.ifNot) {
-		// 	let t = x.ifNot.split(/\s/);
-		// 	let end = false;
-		// 	for (let i of t)
-		// 		if (parentProps.includes(i)) {
-		// 			end = true;
-		// 			break;
-		// 		}
-		// 	if (end) continue;
-		// }
 		let pstr = "";
 		let exclude = "";
 		if (x.props) {

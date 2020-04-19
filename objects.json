@@ -1,59 +1,19 @@
 {
     "properties": {
-        "empty": {
-            "id": "empty",
-            "name": "Empty"
-        },
-        "full": {
-            "id": "full",
-            "name": "Full"
-        }
     },
     "objects": {
         "universe": {
             "id": "universe",
             "name": "Universe",
-            "contentsCount": [1, 5],
-            "contents": [
-                {
-                    "id": "galactic supercluster",
-                    "props": [
-                        {
-                            "id": "empty",
-                            "chance": 0.5,
-                            "excludes": "full"
-                        },
-                        {
-                            "id": "full",
-                            "chance": 1
-                        }
-                    ],
-                    "weight": 10
-                }
-            ]
-        },
-        "galactic supercluster": {
-            "id": "galactic supercluster",
-            "name": "Galactic Supercluster",
-            "contentsCount": [1, 2],
+            "certainContents": [
+            ],
+            "contentsCount": [1, 1],
             "contents": [
                 {
                     "id": "universe",
-                    "weight": 100,
-                    "ifNot": "empty"
-                },
-                {
-                    "id": "void",
-                    "weight": 100,
-                    "if": "empty"
+                    "weight": 10
                 }
             ]
-        },
-        "void": {
-            "id": "void",
-            "name": "Void",
-            "contentsCount": [0, 0],
-            "contents": []
         }
     }
 }
