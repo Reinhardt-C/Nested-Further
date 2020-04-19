@@ -4,7 +4,17 @@ ul {
 
 li {
     background-color: silver;
-    border: grey 2px solid;
+    border: white 2px solid;
+    transition: 0.2s;
+}
+
+li:hover {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+span {
+    height: 100%;
 }
 
 .closed, .unopened, .open {

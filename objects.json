@@ -401,11 +401,66 @@
 					"parentProps": true
 				}
 			],
-			"contentsCount": [0, 0],
-			"contents": []
+			"contentsCount": [1, 10],
+			"contents": [
+				{
+					"id": "planet",
+					"weight": 30,
+					"props": {}
+				},
+				{
+					"id": "star",
+					"weight": 1,
+					"props": [
+						{
+							"id": "red",
+							"chance": 0.7,
+							"excludes": "yellow white blue"
+						},
+						{
+							"id": "yellow",
+							"chance": 0.33,
+							"excludes": "white blue"
+						},
+						{
+							"id": "white",
+							"chance": 0.6,
+							"excludes": "blue"
+						},
+						{
+							"id": "blue",
+							"chance": 1,
+							"excludes": "dwarf"
+						},
+						{
+							"id": "dwarf",
+							"chance": 0.5,
+							"excludes": "giant supergiant hypergiant"
+						},
+						{
+							"id": "giant",
+							"chance": 0.2,
+							"excludes": "supergiant hypergiant"
+						},
+						{
+							"id": "supergiant",
+							"chance": 0.225,
+							"excludes": "hypergiant"
+						},
+						{
+							"id": "hypergiant",
+							"chance": 0.125
+						}
+					]
+				}
+			]
 		},
 		"star": {
 			"name": "Star",
+			"contentsCount": [0, 0]
+		},
+		"planet": {
+			"name": "Planet",
 			"contentsCount": [0, 0]
 		},
 		"hypervoid": {

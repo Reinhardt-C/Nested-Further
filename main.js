@@ -93,7 +93,29 @@ function handleChildren(id, parent) {
 		if (x) {
 			if (i.parentProps) pstr = parentProps.replace(/\*/g, "");
 			else if (x.props) {
-				for (let j of x.props) {
+				let a = x.props;
+				a = a.filter(e => {
+					if (e.if) {
+						let t = e.if.split(/\s/);
+						for (let i of t)
+							if (!parentProps.includes(i)) {
+								return false;
+								break;
+							}
+						return true;
+					}
+					if (e.ifNot) {
+						let t = e.ifNot.split(/\s/);
+						for (let i of t)
+							if (parentProps.includes(i)) {
+								return false;
+								break;
+							}
+						return true;
+					}
+					return true;
+				});
+				for (let j of a) {
 					if (exclude.includes(j.id)) {
 						continue;
 					}
