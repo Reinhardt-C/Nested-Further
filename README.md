@@ -4,12 +4,12 @@ Orteil's Nested but better in every way and easily moddable
 JSON structure:
 
     * properties
-        * property
+        * property (object)
             * id (string)
             * name (string)
         ...
     * objects
-        * object
+        * object (object)
             * id (string)
             * name (string)
             * contentsCount (array)
