@@ -68,7 +68,7 @@ function handleChildren(id, parent) {
 				for (let j = 0; j < i.count; j++) {
 					let pstr = "";
 					let exclude = "";
-					if (i.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)/g, "");
+					if (i.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)(\s|$)/g, "");
 					if (i.props) {
 						for (let j of i.props) {
 							if (exclude.includes(j.id)) {
@@ -91,7 +91,7 @@ function handleChildren(id, parent) {
 		let pstr = "";
 		let exclude = "";
 		if (x) {
-			if (i.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)/g, "");
+			if (i.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)(\s|$)/g, "");
 			if (x.props) {
 				let a = x.props;
 				a = a.filter(e => {
