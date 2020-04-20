@@ -48,4 +48,4 @@ JSON structure:
         ...
         
 The parentProps boolean will copy all properties from the parent (e.g. a red giant star system -> red giant star) though it also removes
-asterisks to allow for invisible properties on parents (e.g. red* giant* star system (with red* and giant* having "" for names) -> red giant star).
+asterisks to allow for invisible properties on parents (e.g. red* giant* star system (with red* and giant* having "" for names) -> red giant star). If a parent property has - at the end then it won't be passed on.
