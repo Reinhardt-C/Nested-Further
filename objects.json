@@ -1,80 +1,141 @@
 {
 	"properties": {
-		"spiral": {
-			"name": "Spiral"
-		},
-		"elliptical": {
-			"name": "Elliptical"
-		},
-		"irregular": {
-			"name": "Irregular"
-		},
-		"lenticular": {
-			"name": "Lenticular"
-		},
-		"red": {
-			"name": "Red"
-		},
-		"yellow": {
-			"name": "Yellow"
-		},
-		"white": {
-			"name": "White"
-		},
-		"blue": {
-			"name": "Blue"
-		},
-		"dwarf": {
-			"name": "Dwarf"
-		},
-		"giant": {
-			"name": "Giant"
-		},
-		"supergiant": {
-			"name": "Supergiant"
-		},
-		"hypergiant": {
-			"name": "Hypergiant"
-		},
-		"red*": {
-			"name": ""
-		},
-		"yellow*": {
-			"name": ""
-		},
-		"white*": {
-			"name": ""
-		},
-		"blue*": {
-			"name": ""
-		},
-		"dwarf*": {
-			"name": ""
-		},
-		"giant*": {
-			"name": ""
-		},
-		"supergiant*": {
-			"name": ""
-		},
-		"hypergiant*": {
-			"name": ""
-		},
-		"scorched": {
-			"name": "Scorched"
-		},
-		"frozen": {
-			"name": "Frozen"
-		},
-		"barren": {
-			"name": "Barren"
-		},
-		"telluric": {
-			"name": "Telluric"
-		},
-		"gasGiant": {
-			"name": "Massive Gaseous"
-		}
+		"spiral": { "name": "Spiral" },
+		"elliptical": { "name": "Elliptical" },
+		"irregular": { "name": "Irregular" },
+		"lenticular": { "name": "Lenticular" },
+		"red": { "name": "Red" },
+		"yellow": { "name": "Yellow" },
+		"white": { "name": "White" },
+		"blue": { "name": "Blue" },
+		"dwarf": { "name": "Dwarf" },
+		"giant": { "name": "Giant" },
+		"supergiant": { "name": "Supergint" },
+		"hypergiant": { "name": "Hypergiant" },
+		"red*": { "name": "" },
+		"yellow*": { "name": "" },
+		"white*": { "name": "" },
+		"blue*": { "name": "" },
+		"dwarf*": { "name": "" },
+		"giant*": { "name": "" },
+		"supergiant*": { "name": "" },
+		"hypergiant*": { "name": "" },
+		"scorched": { "name": "Scorched" },
+		"frozen": { "name": "Frozen" },
+		"barren": { "name": "Barren" },
+		"telluric-": { "name": "Telluric" },
+		"gasGiant-": { "name": "Massive Gaseous" },
+		"hydrogen": { "name": "Hydrogen" },
+		"helium": { "name": "Helium" },
+		"lithium": { "name": "Lithium" },
+		"beryllium": { "name": "Beryllium" },
+		"boron": { "name": "Boron" },
+		"carbon": { "name": "Carbon" },
+		"nitrogen": { "name": "Nitrogen" },
+		"oxygen": { "name": "Oxygen" },
+		"fluorine": { "name": "Fluorine" },
+		"neon": { "name": "Neon" },
+		"sodium": { "name": "Sodium" },
+		"magnesium": { "name": "Magnesium" },
+		"aluminum": { "name": "Aluminum" },
+		"silicon": { "name": "Silicon" },
+		"phosphorus": { "name": "Phosphorus" },
+		"sulfur": { "name": "Sulfur" },
+		"chlorine": { "name": "Chlorine" },
+		"argon": { "name": "Argon" },
+		"potassium": { "name": "Potassium" },
+		"calcium": { "name": "Calcium" },
+		"scandium": { "name": "Scandium" },
+		"titanium": { "name": "Titanium" },
+		"vanadium": { "name": "Vanadium" },
+		"chromium": { "name": "Chromium" },
+		"manganese": { "name": "Manganese" },
+		"iron": { "name": "Iron" },
+		"cobalt": { "name": "Cobalt" },
+		"nickel": { "name": "Nickel" },
+		"copper": { "name": "Copper" },
+		"zinc": { "name": "Zinc" },
+		"gallium": { "name": "Gallium" },
+		"germanium": { "name": "Germanium" },
+		"arsenic": { "name": "Arsenic" },
+		"selenium": { "name": "Selenium" },
+		"bromine": { "name": "Bromine" },
+		"krypton": { "name": "Krypton" },
+		"rubidium": { "name": "Rubidium" },
+		"strontium": { "name": "Strontium" },
+		"yttrium": { "name": "Yttrium" },
+		"zirconium": { "name": "Zirconium" },
+		"niobium": { "name": "Niobium" },
+		"molybdenum": { "name": "Molybdenum" },
+		"technetium": { "name": "Technetium" },
+		"ruthenium": { "name": "Ruthenium" },
+		"rhodium": { "name": "Rhodium" },
+		"palladium": { "name": "Palladium" },
+		"silver": { "name": "Silver" },
+		"cadmium": { "name": "Cadmium" },
+		"indium": { "name": "Indium" },
+		"tin": { "name": "Tin" },
+		"antimony": { "name": "Antimony" },
+		"tellurium": { "name": "Tellurium" },
+		"iodine": { "name": "Iodine" },
+		"xenon": { "name": "Xenon" },
+		"cesium": { "name": "Cesium" },
+		"barium": { "name": "Barium" },
+		"lanthanum": { "name": "Lanthanum" },
+		"cerium": { "name": "Cerium" },
+		"praseodymium": { "name": "Praseodymium" },
+		"neodymium": { "name": "Neodymium" },
+		"promethium": { "name": "Promethium" },
+		"samarium": { "name": "Samarium" },
+		"europium": { "name": "Europium" },
+		"gadolinium": { "name": "Gadolinium" },
+		"terbium": { "name": "Terbium" },
+		"dysprosium": { "name": "Dysprosium" },
+		"holmium": { "name": "Holmium" },
+		"erbium": { "name": "Erbium" },
+		"thulium": { "name": "Thulium" },
+		"ytterbium": { "name": "Ytterbium" },
+		"lutetium": { "name": "Lutetium" },
+		"hafnium": { "name": "Hafnium" },
+		"tantalum": { "name": "Tantalum" },
+		"tungsten": { "name": "Tungsten" },
+		"rhenium": { "name": "Rhenium" },
+		"osmium": { "name": "Osmium" },
+		"iridium": { "name": "Iridium" },
+		"platinum": { "name": "Platinum" },
+		"gold": { "name": "Gold" },
+		"mercury": { "name": "Mercury" },
+		"thallium": { "name": "Thallium" },
+		"lead": { "name": "Lead" },
+		"bismuth": { "name": "Bismuth" },
+		"polonium": { "name": "Polonium" },
+		"astatine": { "name": "Astatine" },
+		"radon": { "name": "Radon" },
+		"francium": { "name": "Francium" },
+		"radium": { "name": "Radium" },
+		"actinium": { "name": "Actinium" },
+		"thorium": { "name": "Thorium" },
+		"protactinium": { "name": "Protactinium" },
+		"uranium": { "name": "Uranium" },
+		"up": { "name": "Up" },
+		"down": { "name": "Down" },
+		"charm": { "name": "Charm" },
+		"strange": { "name": "Strange" },
+		"top": { "name": "Top" },
+		"beauty": { "name": "Beauty" },
+		"qcred": { "name": "Red" },
+		"qcblue": { "name": "Blue" },
+		"qcgreen": { "name": "Green" },
+		"qcared": { "name": "Antired" },
+		"qcablue": { "name": "Antiblue" },
+		"qcagreen": { "name": "Antigreen" },
+		"qcno": { "name": "Colourless" },
+		"rishont": { "name": "T" },
+		"rishonv": { "name": "V" },
+		"water": { "name": "Water" },
+		"ammonia": { "name": "Ammonia" },
+		"methane": { "name": "Methane" },
+		"nacl": { "name": "Sodium Chloride" }
 	},
 	"objects": {
 		"universe": {
@@ -426,7 +487,7 @@
 							"id": "scorched",
 							"chance": 0.2,
 							"ifNot": "dwarf",
-							"excludes": "gasGiant"
+							"excludes": "gasGiant-"
 						},
 						{
 							"id": "frozen",
@@ -438,15 +499,20 @@
 						{
 							"id": "barren",
 							"chance": 0.1,
-							"excludes": "gasGiant"
+							"excludes": "gasGiant-"
 						},
 						{
-							"id": "telluric",
+							"id": "telluric-",
 							"chance": 0.7,
-							"excludes": "gasGiant"
+							"excludes": "telluric- gasGiant-"
 						},
 						{
-							"id": "gasGiant",
+							"id": "gasGiant-",
+							"chance": 1,
+							"excludes": "telluric-"
+						},
+						{
+							"id": "telluric-",
 							"chance": 1
 						}
 					]
@@ -522,23 +588,163 @@
 		},
 		"starChromosphere": {
 			"name": "Stellar Chromosphere",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.8,
+							"excludes": "helium"
+						},
+						{
+							"id": "helium",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"starPhotosphere": {
 			"name": "Stellar Photosphere",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.8,
+							"excludes": "helium"
+						},
+						{
+							"id": "helium",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"starConvectiveZone": {
 			"name": "Stellar Convective Zone",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.8,
+							"excludes": "helium"
+						},
+						{
+							"id": "helium",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"starRadiativeZone": {
 			"name": "Stellar Radiative Zone",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.8,
+							"excludes": "helium"
+						},
+						{
+							"id": "helium",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"starCore": {
 			"name": "Stellar Core",
-			"contentsCount": [0, 0]
+			"contentsCount": [5, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 10,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.5,
+							"excludes": "helium carbon oxygen neon magnesium silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "helium",
+							"chance": 0.5,
+							"excludes": "carbon oxygen neon magnesium silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "oxygen neon magnesium silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "neon magnesium silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "neon",
+							"chance": 0.5,
+							"excludes": "magnesium silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "magnesium",
+							"chance": 0.5,
+							"excludes": "silicon sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "silicon",
+							"chance": 0.5,
+							"excludes": "sulfur argon calcium titanium chromium iron"
+						},
+						{
+							"id": "sulfur",
+							"chance": 0.5,
+							"excludes": "argon calcium titanium chromium iron"
+						},
+						{
+							"id": "argon",
+							"chance": 0.5,
+							"excludes": "calcium titanium chromium iron"
+						},
+						{
+							"id": "calcium",
+							"chance": 0.5,
+							"excludes": "titanium chromium iron"
+						},
+						{
+							"id": "titanium",
+							"chance": 0.5,
+							"excludes": "chromium iron"
+						},
+						{
+							"id": "chromium",
+							"chance": 0.5,
+							"excludes": "iron"
+						},
+						{
+							"id": "iron",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"planet": {
 			"name": "Planet",
@@ -550,17 +756,18 @@
 				{
 					"id": "planetCrust",
 					"count": 1,
-					"ifNot": "gasGiant"
+					"parentProps": true,
+					"ifNot": "gasGiant-"
 				},
 				{
 					"id": "planetMantle",
 					"count": 1,
-					"ifNot": "gasGiant"
+					"ifNot": "gasGiant-"
 				},
 				{
 					"id": "coldMantle",
 					"count": 1,
-					"if": "gasGiant"
+					"if": "gasGiant-"
 				},
 				{
 					"id": "planetCore",
@@ -571,23 +778,196 @@
 		},
 		"planetAtmosphere": {
 			"name": "Planetary Atmosphere",
-			"contentsCount": [0, 0]
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "hydrogen",
+							"chance": 0.1,
+							"excludes": "helium nitrogen oxygen flourine neon chlorine argon"
+						},
+						{
+							"id": "helium",
+							"chance": 0.3,
+							"excludes": "nitrogen oxygen flourine neon chlorine argon"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 0.7,
+							"excludes": "oxygen flourine neon chlorine argon"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "flourine neon chlorine argon"
+						},
+						{
+							"id": "flourine",
+							"chance": 0.01,
+							"excludes": "neon chlorine argon"
+						},
+						{
+							"id": "neon",
+							"chance": 0.3,
+							"excludes": "chlorine argon"
+						},
+						{
+							"id": "chlorine",
+							"chance": 0.005,
+							"excludes": "argon"
+						},
+						{
+							"id": "argon",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"planetCrust": {
 			"name": "Planetary Crust",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "continent",
+					"weight": 3
+				},
+				{
+					"id": "ocean",
+					"weight": 2,
+					"ifNot": "scorched"
+				}
+			]
+		},
+		"continent": {
+			"name": "Continent",
+			"contentsCount": [3, 5],
+			"contents": [
+				{
+					"id": "ground",
+					"weight": 10
+				}
+			]
+		},
+		"ocean": {
+			"name": "Ocean",
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "molecule",
+					"weight": 1,
+					"props": [
+						{ "id": "water", "chance": 0.9, "excludes": "nacl" },
+						{ "id": "nacl", "chance": 1 }
+					]
+				}
+			]
+		},
+		"ground": {
+			"name": "Ground",
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "silicon aluminium iron"
+						},
+						{
+							"id": "silicon",
+							"chance": 0.5,
+							"excludes": "aluminium iron"
+						},
+						{
+							"id": "aluminium",
+							"chance": 0.32,
+							"excludes": "iron"
+						},
+						{
+							"id": "iron",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"planetMantle": {
 			"name": "Planetary Mantle",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "magma",
+					"weight": 1
+				}
+			]
+		},
+		"magma": {
+			"name": "Magma",
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "silicon magnesium"
+						},
+						{
+							"id": "silicon",
+							"chance": 0.4,
+							"excludes": "magnesium"
+						},
+						{
+							"id": "magnesium",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"coldMantle": {
 			"name": "Planetary Mantle",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "molecule",
+					"weight": 1,
+					"props": [
+						{ "id": "water", "chance": 0.4, "excludes": "ammonia methane" },
+						{ "id": "ammonia", "chance": 0.7, "excludes": "methane" },
+						{ "id": "methane", "chance": 1 }
+					]
+				}
+			]
 		},
 		"planetCore": {
 			"name": "Planetary Core",
-			"contentsCount": [0, 0]
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "nickel",
+							"chance": 0.5,
+							"excludes": "iron"
+						},
+						{
+							"id": "iron",
+							"chance": 1
+						}
+					]
+				}
+			]
 		},
 		"hypervoid": {
 			"name": "Hypervoid",
@@ -599,6 +979,539 @@
 		},
 		"void": {
 			"name": "Void",
+			"contentsCount": [0, 0]
+		},
+		"molecule": {
+			"name": "Molecule",
+			"certainContents": [
+				{ "id": "atom", "count": 2, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "water" },
+				{ "id": "atom", "count": 1, "props": [{ "id": "oxygen", "chance": 1 }], "if": "water" },
+				{ "id": "atom", "count": 1, "props": [{ "id": "sodium", "chance": 1 }], "if": "nacl" },
+				{ "id": "atom", "count": 1, "props": [{ "id": "chlorine", "chance": 1 }], "if": "nacl" },
+				{ "id": "atom", "count": 1, "props": [{ "id": "carbon", "chance": 1 }], "if": "methane" },
+				{ "id": "atom", "count": 4, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "methane" },
+				{ "id": "atom", "count": 1, "props": [{ "id": "nitrogen", "chance": 1 }], "if": "ammonia" },
+				{ "id": "atom", "count": 3, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "ammonia" }
+			],
+			"contentsCount": [0, 0]
+		},
+		"atom": {
+			"name": "Atom",
+			"certainContents": [
+				{
+					"id": "nucleus",
+					"count": 1,
+					"parentProps": true
+				},
+				{
+					"id": "electron",
+					"count": 1
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium"
+				},
+				{
+					"id": "electron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				}
+			],
+			"contentsCount": [0, 4],
+			"contents": [
+				{
+					"id": "electron",
+					"weight": 1000,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				}
+			]
+		},
+		"nucleus": {
+			"name": "Nucleus",
+			"certainContents": [
+				{
+					"id": "proton",
+					"count": 1
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium"
+				},
+				{
+					"id": "proton",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				},
+				{
+					"id": "neutron",
+					"count": 1
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium"
+				},
+				{
+					"id": "neutron",
+					"count": 1,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				}
+			],
+			"contentsCount": [0, 4],
+			"contents": [
+				{
+					"id": "proton",
+					"weight": 10,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				},
+				{
+					"id": "neutron",
+					"weight": 10,
+					"ifNot": "hydrogen helium lithium beryllium boron carbon nitrogen oxygen flourine neon sodium magnesium"
+				}
+			]
+		},
+		"proton": {
+			"name": "Proton",
+			"certainContents": [
+				{
+					"id": "quark",
+					"count": 2,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.33,
+							"excludes": "qcblue qcgreen"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1
+						},
+						{
+							"id": "up",
+							"chance": 1
+						}
+					]
+				},
+				{
+					"id": "quark",
+					"count": 1,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.33,
+							"excludes": "qcblue qcgreen"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1
+						},
+						{
+							"id": "down",
+							"chance": 1
+						}
+					]
+				},
+				{
+					"id": "gluon",
+					"count": 3,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.333,
+							"excludes": "qcblue qcgreen qcared"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen qcablue"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1,
+							"excludes": "qcagreen"
+						},
+						{
+							"id": "qcared",
+							"chance": 0.333,
+							"excludes": "qcared qcablue qcagreen"
+						},
+						{
+							"id": "qcablue",
+							"chance": 0.5,
+							"excludes": "qcared qcagreen"
+						},
+						{
+							"id": "qcagreen",
+							"chance": 1,
+							"excludes": "qcared"
+						},
+						{
+							"id": "qcared",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"neutron": {
+			"name": "Neutron",
+			"certainContents": [
+				{
+					"id": "quark",
+					"count": 1,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.33,
+							"excludes": "qcblue qcgreen"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1
+						},
+						{
+							"id": "up",
+							"chance": 1
+						}
+					]
+				},
+				{
+					"id": "quark",
+					"count": 2,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.33,
+							"excludes": "qcblue qcgreen"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1
+						},
+						{
+							"id": "down",
+							"chance": 1
+						}
+					]
+				},
+				{
+					"id": "gluon",
+					"count": 3,
+					"props": [
+						{
+							"id": "qcred",
+							"chance": 0.333,
+							"excludes": "qcblue qcgreen qcared"
+						},
+						{
+							"id": "qcblue",
+							"chance": 0.5,
+							"excludes": "qcgreen qcablue"
+						},
+						{
+							"id": "qcgreen",
+							"chance": 1,
+							"excludes": "qcagreen"
+						},
+						{
+							"id": "qcared",
+							"chance": 0.333,
+							"excludes": "qcared qcablue qcagreen"
+						},
+						{
+							"id": "qcablue",
+							"chance": 0.5,
+							"excludes": "qcared qcagreen"
+						},
+						{
+							"id": "qcagreen",
+							"chance": 1,
+							"excludes": "qcared"
+						},
+						{
+							"id": "qcared",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"electron": {
+			"name": "Electron",
+			"certainContents": [
+				{
+					"id": "antipreon",
+					"props": [
+						{
+							"id": "rishont",
+							"chance": 1
+						}
+					],
+					"count": 3
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"quark": {
+			"name": "Quark",
+			"certainContents": [
+				{
+					"id": "preon",
+					"count": 2,
+					"props": [{ "id": "rishont", "chance": 1 }],
+					"ifNot": "down strange beauty"
+				},
+				{
+					"id": "preon",
+					"count": 1,
+					"props": [{ "id": "rishonv", "chance": 1 }],
+					"ifNot": "down strange beauty"
+				},
+				{
+					"id": "antipreon",
+					"count": 1,
+					"props": [{ "id": "rishont", "chance": 1 }],
+					"ifNot": "up charm top"
+				},
+				{
+					"id": "antipreon",
+					"count": 2,
+					"props": [{ "id": "rishonv", "chance": 1 }],
+					"ifNot": "up charm top"
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"gluon": {
+			"name": "Gluon",
+			"contentsCount": [1, 5],
+			"contents": [
+				{
+					"id": "string",
+					"weight": 1
+				}
+			]
+		},
+		"preon": {
+			"name": "Preon",
+			"contentsCount": [1, 1],
+			"contents": [
+				{
+					"id": "string",
+					"weight": 1
+				}
+			]
+		},
+		"antipreon": {
+			"name": "Antipreon",
+			"contentsCount": [1, 1],
+			"contents": [
+				{
+					"id": "string",
+					"weight": 1
+				}
+			]
+		},
+		"string": {
+			"name": "String",
+			"contentsCount": [5, 10],
+			"contents": [
+				{ "id": "sergeconcept", "weight": 3 },
+				{ "id": "nonconcept", "weight": 1 }
+			]
+		},
+		"sergeconcept": {
+			"name": "Sergeconcept",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "sergeconnection", "weight": 1 }]
+		},
+		"sergeconnection": {
+			"name": "Sergeconnection",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "sergepoint", "weight": 1 }]
+		},
+		"nonconcept": {
+			"name": "Non-concept",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "sergepoint", "weight": 1 }]
+		},
+		"sergepoint": {
+			"name": "Sergepoint",
 			"contentsCount": [0, 0]
 		}
 	}
