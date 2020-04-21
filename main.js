@@ -6,7 +6,7 @@ function init() {
 		.then(json => {
 			obj = json.objects;
 			prop = json.properties;
-			document.body.innerHTML = "";
+			document.body.innerHTML = "Nested Further - v0.0.0<hr>";
 			createBase();
 			createNode("universe");
 			return json;
@@ -91,7 +91,7 @@ function handleChildren(id, parent) {
 		let pstr = "";
 		let exclude = "";
 		if (x) {
-			if (i.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)(\s|$)/g, "");
+			if (x.parentProps) pstr = parentProps.replace(/\*|((\s|^)\w+-)(\s|$)/g, "");
 			if (x.props) {
 				let a = x.props;
 				a = a.filter(e => {

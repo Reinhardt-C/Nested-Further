@@ -132,10 +132,27 @@
 		"qcno": { "name": "Colourless" },
 		"rishont": { "name": "T" },
 		"rishonv": { "name": "V" },
+		"basic": { "name": "Basic" },
+		"mathematical": { "name": "Mathematical" },
+		"logical": { "name": "Logical" },
 		"water": { "name": "Water" },
 		"ammonia": { "name": "Ammonia" },
 		"methane": { "name": "Methane" },
-		"nacl": { "name": "Sodium Chloride" }
+		"nacl": { "name": "Sodium Chloride" },
+		"cellulose": { "name": "Cellulose" },
+		"ruined": { "name": "Ruined" },
+		"primitive": { "name": "Primitive" },
+		"medieval": { "name": "Medieval" },
+		"modern": { "name": "Modern" },
+		"advanced": { "name": "Advanced" },
+		"planetary": { "name": "Planetary" },
+		"stellar": { "name": "Stellar" },
+		"galactic": { "name": "Galactic" },
+		"capital": { "name": "Capital" },
+		"glass": { "name": "Glass" },
+		"food": { "name": "Food" },
+		"clothes": { "name": "Clothing" },
+		"weapon": { "name": "Weaponry" }
 	},
 	"objects": {
 		"universe": {
@@ -833,21 +850,182 @@
 			"contents": [
 				{
 					"id": "continent",
-					"weight": 3
+					"weight": 3,
+					"parentProps": true
 				},
 				{
 					"id": "ocean",
 					"weight": 2,
-					"ifNot": "scorched"
+					"parentProps": true,
+					"ifNot": "scorched barren"
+				},
+				{
+					"id": "ocean",
+					"weight": 2,
+					"if": "barren"
 				}
 			]
 		},
 		"continent": {
 			"name": "Continent",
-			"contentsCount": [3, 5],
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "civilization",
+					"weight": 2,
+					"props": [
+						{ "id": "ruined", "chance": 0.2, "excludes": "primitive medieval modern advanced" },
+						{ "id": "primitive", "chance": 0.5, "excludes": "medieval modern advanced" },
+						{ "id": "medieval", "chance": 0.7, "excludes": "modern advanced" },
+						{ "id": "modern", "chance": 0.8, "excludes": "advanced" },
+						{ "id": "advanced", "chance": 1 }
+					],
+					"ifNot": "scorched"
+				},
+				{ "id": "mountain", "weight": 10 },
+				{ "id": "field", "weight": 10, "ifNot": "scorched barren" },
+				{ "id": "desert", "weight": 4, "props": [{ "id": "glass", "chance": 1, "if": "scorched" }], "ifNot": "barren frozen" },
+				{ "id": "desert", "weight": 15, "props": [{ "id": "glass", "chance": 1, "if": "scorched" }], "if": "barren" },
+				{ "id": "ground", "weight": 10 }
+			]
+		},
+		"field": {
+			"name": "Field",
+			"contentsCount": [10, 20],
 			"contents": [
 				{
 					"id": "ground",
+					"weight": 10
+				}
+			]
+		},
+		"desert": {
+			"name": "Desert",
+			"contentsCount": [4, 10],
+			"contents": [
+				{ "id": "dune", "weight": 5, "ifNot": "glass" },
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{ "id": "silicon", "chance": 0.8, "excludes": "oxygen" },
+						{ "id": "oxygen", "chance": 1 }
+					],
+					"if": "glass"
+				}
+			]
+		},
+		"dune": {
+			"name": "Sand Dune",
+			"contentsCount": [10, 20],
+			"contents": [{ "id": "sand", "weight": 5 }]
+		},
+		"sand": {
+			"name": "Grain of Sand",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{ "id": "silicon", "chance": 0.8, "excludes": "oxygen" },
+						{ "id": "oxygen", "chance": 1 }
+					]
+				}
+			]
+		},
+		"civilization": {
+			"name": "Civilization",
+			"certainContents": [{ "id": "city", "count": 1, "parentProps": true, "props": [{ "id": "capital", "chance": 1 }], "ifNot": "ruined primitive" }],
+			"contentsCount": [10, 15],
+			"contents": [
+				{ "id": "city", "parentProps": true, "weight": 5, "ifNot": "ruined primitive" },
+				{ "id": "hut", "weight": 5, "if": "primitive" },
+				{ "id": "ruins", "weight": 5, "if": "ruined" }
+			]
+		},
+		"city": {
+			"name": "City",
+			"contentsCount": [10, 20],
+			"contents": [
+				{ "id": "house", "weight": 10 },
+				{
+					"id": "shop",
+					"weight": 3,
+					"props": [
+						{ "id": "food", "chance": 0.6, "excludes": "clothes weapon" },
+						{ "id": "clothes", "chance": 0.6, "excludes": "weapon" },
+						{ "id": "weapon", "chance": 1 }
+					]
+				}
+			]
+		},
+		"hut": {
+			"name": "Hut",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "wood",
+					"weight": 1
+				}
+			]
+		},
+		"house": {
+			"name": "House",
+			"contentsCount": [10, 15],
+			"contents": [
+				{
+					"id": "wood",
+					"weight": 1
+				}
+			]
+		},
+		"shop": {
+			"name": "Shop",
+			"contentsCount": [10, 15],
+			"contents": [
+				{
+					"id": "wood",
+					"weight": 1
+				}
+			]
+		},
+		"wood": {
+			"name": "Wood",
+			"contentsCount": [10, 15],
+			"contents": [
+				{
+					"id": "molecule",
+					"weight": 1,
+					"props": [
+						{
+							"id": "cellulose",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"ruins": {
+			"name": "Ruins",
+			"contentsCount": [10, 20],
+			"contents": [{ "id": "rock", "weight": 5 }]
+		},
+		"rock": {
+			"name": "Rock",
+			"contentsCount": [1, 3],
+			"contents": [{ "id": "ground", "weight": 5 }]
+		},
+		"mountain": {
+			"name": "Mountain",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "ground",
+					"weight": 10
+				},
+				{
+					"id": "rock",
 					"weight": 10
 				}
 			]
@@ -991,7 +1169,10 @@
 				{ "id": "atom", "count": 1, "props": [{ "id": "carbon", "chance": 1 }], "if": "methane" },
 				{ "id": "atom", "count": 4, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "methane" },
 				{ "id": "atom", "count": 1, "props": [{ "id": "nitrogen", "chance": 1 }], "if": "ammonia" },
-				{ "id": "atom", "count": 3, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "ammonia" }
+				{ "id": "atom", "count": 3, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "ammonia" },
+				{ "id": "atom", "count": 6, "props": [{ "id": "carbon", "chance": 1 }], "if": "cellulose" },
+				{ "id": "atom", "count": 5, "props": [{ "id": "oxygen", "chance": 1 }], "if": "cellulose" },
+				{ "id": "atom", "count": 10, "props": [{ "id": "hydrogen", "chance": 1 }], "if": "cellulose" }
 			],
 			"contentsCount": [0, 0]
 		},
@@ -1490,15 +1671,131 @@
 		"string": {
 			"name": "String",
 			"contentsCount": [5, 10],
+			"contents": [{ "id": "univoid", "weight": 1 }]
+		},
+		"univoid": {
+			"name": "Univoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "multivoid", "weight": 1 }]
+		},
+		"multivoid": {
+			"name": "Multivoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "megavoid", "weight": 1 }]
+		},
+		"megavoid": {
+			"name": "Megavoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "gigavoid", "weight": 1 }]
+		},
+		"gigavoid": {
+			"name": "Gigavoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "archvoid", "weight": 1 }]
+		},
+		"archvoid": {
+			"name": "Archvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "omnivoid", "weight": 1 }]
+		},
+		"omnivoid": {
+			"name": "Omnivoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "monocosmvoid", "weight": 1 }]
+		},
+		"monocosmvoid": {
+			"name": "Monocosmvoid",
+			"contentsCount": [5, 10],
 			"contents": [
-				{ "id": "sergeconcept", "weight": 3 },
+				{ "id": "greatvoid", "weight": 2 },
+				{ "id": "sergeconcept", "props": [{ "id": "mathematical", "chance": 1 }], "weight": 1 }
+			]
+		},
+		"greatvoid": {
+			"name": "Greatvoid",
+			"contentsCount": [5, 10],
+			"contents": [
+				{ "id": "grandvoid", "weight": 2 },
+				{ "id": "sergeconcept", "props": [{ "id": "logical", "chance": 1 }], "weight": 1 }
+			]
+		},
+		"grandvoid": {
+			"name": "Grandvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "alternah", "weight": 1 }]
+		},
+		"alternah": {
+			"name": "Alternah",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "selfvoid", "weight": 1 }]
+		},
+		"selfvoid": {
+			"name": "Selfvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "maiorvoid", "weight": 1 }]
+		},
+		"maiorvoid": {
+			"name": "Maiorvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "schemavoid", "weight": 1 }]
+		},
+		"schemavoid": {
+			"name": "Schemavoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "antivoid", "weight": 1 }]
+		},
+		"antivoid": {
+			"name": "Antivoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "paravoid", "weight": 1 }]
+		},
+		"paravoid": {
+			"name": "Paravoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "nonvoid", "weight": 1 }]
+		},
+		"nonvoid": {
+			"name": "Nonvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "deepvoid", "weight": 1 }]
+		},
+		"deepvoid": {
+			"name": "Deepvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "deepervoid", "weight": 1 }]
+		},
+		"deepervoid": {
+			"name": "Deepervoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "variationvoid", "weight": 1 }]
+		},
+		"variationvoid": {
+			"name": "Variationvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "boxvoid", "weight": 1 }]
+		},
+		"boxvoid": {
+			"name": "Boxvoid",
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "antibox", "weight": 1 }]
+		},
+		"antibox": {
+			"name": "Antibox",
+			"contentsCount": [5, 10],
+			"contents": [
+				{ "id": "sergeconcept", "weight": 3, "props": [{ "id": "basic", "chance": 1 }] },
 				{ "id": "nonconcept", "weight": 1 }
 			]
 		},
 		"sergeconcept": {
 			"name": "Sergeconcept",
 			"contentsCount": [5, 10],
-			"contents": [{ "id": "sergeconnection", "weight": 1 }]
+			"contents": [
+				{ "id": "sergeconnection", "weight": 3, "ifNot": "mathematical" },
+				{ "id": "grandvoid", "weight": 1, "if": "logical" },
+				{ "id": "sergeconcept", "props": [{ "id": "logical", "chance": 1 }], "weight": 1, "if": "mathematical" },
+				{ "id": "greatvoid", "weight": 1, "if": "mathematical" }
+			]
 		},
 		"sergeconnection": {
 			"name": "Sergeconnection",

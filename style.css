@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    white-space: nowrap;
+}
+
 ul {
     list-style-type: none;
 }
@@ -5,7 +10,11 @@ ul {
 li {
     background-color: silver;
     border: white 2px solid;
+    border-right: none;
+    border-bottom: none;
     transition: 0.2s;
+    width: auto;
+    min-width: 300px;
 }
 
 li:hover {
@@ -16,6 +25,21 @@ li:hover {
 
 span {
     height: 100%;
+}
+
+body {
+    float: left;
+    min-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: silver;
+}
+
+::-webkit-scrollbar-thumb {
+    background: grey;
 }
 
 #everything {
