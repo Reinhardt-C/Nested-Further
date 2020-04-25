@@ -152,7 +152,19 @@
 		"glass": { "name": "Glass" },
 		"food": { "name": "Food" },
 		"clothes": { "name": "Clothing" },
-		"weapon": { "name": "Weaponry" }
+		"weapon": { "name": "Weaponry" },
+		"cytoplasmic": { "name": "Cytoplasmic" },
+		"liposomal": { "name": "Liposomal" },
+		"lysosomal": { "name": "Lysosomal" },
+		"endosomal": { "name": "Endosomal" },
+		"mitochondrial": { "name": "Mitochondrial" },
+		"cnuclear": { "name": "Nuclear" },
+		"dnaa": { "name": "A" },
+		"dnat": { "name": "T" },
+		"dnag": { "name": "G" },
+		"dnac": { "name": "C" },
+		"f": { "name": "" },
+		"m": { "name": "" }
 	},
 	"objects": {
 		"universe": {
@@ -962,7 +974,53 @@
 		},
 		"hut": {
 			"name": "Hut",
-			"contentsCount": [5, 10],
+			"certainContents": [
+				{
+					"id": "wall",
+					"count": 4
+				}
+			],
+			"contentsCount": [0, 3],
+			"contents": [
+				{
+					"id": "human",
+					"weight": 1
+				}
+			]
+		},
+		"house": {
+			"name": "House",
+			"contentsCount": [4, 8],
+			"contents": [
+				{
+					"id": "room",
+					"weight": 1
+				}
+			]
+		},
+		"room": {
+			"name": "Room",
+			"certainContents": [
+				{
+					"id": "wall",
+					"count": 4
+				}
+			],
+			"contentsCount": [4, 8],
+			"contents": [
+				{
+					"id": "furniture",
+					"weight": 3
+				},
+				{
+					"id": "human",
+					"weight": 1
+				}
+			]
+		},
+		"wall": {
+			"name": "Wall",
+			"contentsCount": [4, 8],
 			"contents": [
 				{
 					"id": "wood",
@@ -970,9 +1028,9 @@
 				}
 			]
 		},
-		"house": {
-			"name": "House",
-			"contentsCount": [10, 15],
+		"furniture": {
+			"name": "Furniture",
+			"contentsCount": [4, 8],
 			"contents": [
 				{
 					"id": "wood",
@@ -982,11 +1040,1051 @@
 		},
 		"shop": {
 			"name": "Shop",
-			"contentsCount": [10, 15],
+			"certainContents": [
+				{
+					"id": "wall",
+					"count": 4
+				}
+			],
+			"contentsCount": [0, 0],
 			"contents": [
 				{
 					"id": "wood",
 					"weight": 1
+				}
+			]
+		},
+		"human": {
+			"randName": [["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "V", "W", "X", "Y", "Z", "Th", "Sh", "Ch", "Sm", "Sn", "St", "Sw", "Sk", "Sl", "Sp", "Sf", "Thw", "Dw", "Tw", "Thr", "Dr", "Tr", "Qu", "Cr", "Cl", "Pr", "Fr", "Br", "Gr", "Pl", "Fl", "Bl", "Gl", "Shr", "Spl", "Spr", "Str", "Scr", "Squ", "A", "E", "I", "O", "U", "Ae", "Ai", "Ao", "Ei", "Ee", "Oi", "Ou", "Oo"], ["a", "e", "i", "o", "u", "ae", "ai", "ao", "ei", "ee", "oi", "ou", "oo"], [" ", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "x", "y", "z", "th", "sh", "ch", "sm", "sn", "st", "sw", "sk", "sl", "sp", "sf", "thw", "dw", "tw", "thr", "dr", "tr", "qu", "cr", "cl", "pr", "fr", "br", "gr", "pl", "fl", "bl", "gl", "shr", "spl", "spr", "str", "scr", "squ"], [" ", "a", "e", "i", "o", "u", "ae", "ai", "ao", "ei", "ee", "oi", "ou", "oo"], [" ", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "x", "y", "z", "th", "sh", "ch"], [" "], ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "R", "S", "T", "V", "W", "X", "Y", "Z", "Th", "Sh", "Ch", "Sm", "Sn", "St", "Sw", "Sk", "Sl", "Sp", "Sf", "Thw", "Dw", "Tw", "Thr", "Dr", "Tr", "Qu", "Cr", "Cl", "Pr", "Fr", "Br", "Gr", "Pl", "Fl", "Bl", "Gl", "Shr", "Spl", "Spr", "Str", "Scr", "Squ", "A", "E", "I", "O", "U", "Ae", "Ai", "Ao", "Ei", "Ee", "Oi", "Ou", "Oo"], ["a", "e", "i", "o", "u", "ae", "ai", "ao", "ei", "ee", "oi", "ou", "oo"], [" ", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "x", "y", "z", "th", "sh", "ch", "sm", "sn", "st", "sw", "sk", "sl", "sp", "sf", "thw", "dw", "tw", "thr", "dr", "tr", "qu", "cr", "cl", "pr", "fr", "br", "gr", "pl", "fl", "bl", "gl", "shr", "spl", "spr", "str", "scr", "squ"], [" ", "a", "e", "i", "o", "u", "ae", "ai", "ao", "ei", "ee", "oi", "ou", "oo"], [" ", "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "x", "y", "z", "th", "sh", "ch"]],
+			"certainContents": [
+				{
+					"id": "head",
+					"count": 1
+				},
+				{
+					"id": "torso",
+					"count": 1
+				},
+				{
+					"id": "arm",
+					"count": 2
+				},
+				{
+					"id": "leg",
+					"count": 2
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"head": {
+			"name": "Head",
+			"certainContents": [
+				{
+					"id": "skeleton",
+					"count": 1
+				},
+				{
+					"id": "brain",
+					"count": 1
+				}
+			],
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "skin",
+					"weight": 2
+				},
+				{
+					"id": "bloodVessel",
+					"weight": 1
+				}
+			]
+		},
+		"torso": {
+			"name": "Torso",
+			"certainContents": [
+				{
+					"id": "thorax",
+					"count": 1,
+					"props": [
+						{ "id": "f", "chance": 0.5, "excludes": "m" },
+						{ "id": "m", "chance": 1 }
+					]
+				},
+				{
+					"id": "abdomen",
+					"count": 1
+				},
+				{
+					"id": "pelvis",
+					"count": 1,
+					"props": [
+						{ "id": "f", "chance": 0.5, "excludes": "m" },
+						{ "id": "m", "chance": 1 }
+					]
+				},
+				{
+					"id": "skeleton",
+					"count": 1
+				}
+			],
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "skin",
+					"weight": 2
+				},
+				{
+					"id": "bloodVessel",
+					"weight": 1
+				},
+				{
+					"id": "muscle",
+					"weight": 1
+				}
+			]
+		},
+		"thorax": {
+			"name": "Thorax",
+			"certainContents": [
+				{
+					"id": "heart",
+					"count": 1
+				},
+				{
+					"id": "lung",
+					"count": 2
+				},
+				{
+					"id": "breast",
+					"count": 2,
+					"if": "f"
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"abdomen": {
+			"name": "Abdomen",
+			"certainContents": [
+				{
+					"id": "stomach",
+					"count": 1
+				},
+				{
+					"id": "kidney",
+					"count": 1
+				},
+				{
+					"id": "liver",
+					"count": 1
+				},
+				{
+					"id": "spleen",
+					"count": 1
+				},
+				{
+					"id": "intestine",
+					"count": 1
+				},
+				{
+					"id": "pancreas",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"pelvis": {
+			"name": "Pelvic Region",
+			"certainContents": [
+				{ "id": "rectum", "count": 1 },
+				{ "id": "naughtybits", "count": 1 }
+			],
+			"contentsCount": [0, 0]
+		},
+		"muscle": {
+			"name": "Muscle",
+			"contentsCount": [4, 7],
+			"contents": [
+				{
+					"id": "muscleFibre",
+					"weight": 1
+				}
+			]
+		},
+		"muscleFibre": {
+			"name": "Muscle Fibre",
+			"contentsCount": [4, 7],
+			"contents": [
+				{
+					"id": "myofibril",
+					"weight": 1
+				}
+			]
+		},
+		"myofibril": {
+			"name": "Myofibril",
+			"contentsCount": [4, 7],
+			"contents": [
+				{
+					"id": "myosinFilament",
+					"weight": 1
+				}
+			]
+		},
+		"myosinFilament": {
+			"name": "Myosin Filament",
+			"contentsCount": [10, 13],
+			"contents": [
+				{
+					"id": "myosin",
+					"weight": 1
+				}
+			]
+		},
+		"arm": {
+			"name": "Arm",
+			"certainContents": [
+				{
+					"id": "skeleton",
+					"count": 1
+				}
+			],
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "skin",
+					"weight": 2
+				},
+				{
+					"id": "bloodVessel",
+					"weight": 1
+				},
+				{
+					"id": "muscle",
+					"weight": 1
+				}
+			]
+		},
+		"leg": {
+			"name": "Leg",
+			"certainContents": [
+				{
+					"id": "skeleton",
+					"count": 1
+				}
+			],
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "skin",
+					"weight": 2
+				},
+				{
+					"id": "bloodVessel",
+					"weight": 1
+				},
+				{
+					"id": "muscle",
+					"weight": 1
+				}
+			]
+		},
+		"rectum": {
+			"name": "Rectum",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"naughtybits": {
+			"name": "[REDACTED]",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"heart": {
+			"name": "Heart",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"lung": {
+			"name": "Lung",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"stomach": {
+			"name": "Stomach",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"kidney": {
+			"name": "Kidney",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"liver": {
+			"name": "Liver",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"spleen": {
+			"name": "Spleen",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"intestine": {
+			"name": "Intestines",
+			"contentsCount": [20, 40],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"pancreas": {
+			"name": "Pancreas",
+			"contentsCount": [20, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"breast": {
+			"name": "Breast",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"skin": {
+			"name": "Skin",
+			"contentsCount": [10, 30],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				}
+			]
+		},
+		"bloodVessel": {
+			"name": "Blood Vessel",
+			"contentsCount": [10, 12],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 10
+				},
+				{
+					"id": "blood",
+					"weight": 15
+				}
+			]
+		},
+		"blood": {
+			"name": "Blood",
+			"contentsCount": [15, 20],
+			"contents": [
+				{
+					"id": "cell",
+					"weight": 30
+				},
+				{
+					"id": "molecule",
+					"weight": 70,
+					"props": [{ "id": "water", "chance": 1 }]
+				}
+			]
+		},
+		"brain": {
+			"name": "Brain",
+			"contentsCount": [20, 40],
+			"contents": [{ "id": "cell", "weight": 1 }]
+		},
+		"cell": {
+			"name": "Eukaryotic Cell",
+			"certainContents": [
+				{
+					"id": "cytoskeleton",
+					"count": 1
+				},
+				{
+					"id": "centrosome",
+					"count": 1
+				},
+				{
+					"id": "endomembraneSystem",
+					"count": 1
+				},
+
+				{
+					"id": "membrane",
+					"count": 1,
+					"props": [
+						{
+							"id": "cytoplasmic",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [10, 25],
+			"contents": [
+				{
+					"id": "mitochondria",
+					"weight": 0.2
+				},
+				{
+					"id": "cytosol",
+					"weight": 0.7
+				},
+				{
+					"id": "ribosome",
+					"weight": 1
+				}
+			]
+		},
+		"cytosol": {
+			"name": "Cytosol",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "molecule",
+					"weight": 70,
+					"props": [{ "id": "water", "chance": 1 }]
+				},
+				{
+					"id": "saponin",
+					"weight": 30
+				}
+			]
+		},
+		"saponin": {
+			"name": "Saponin",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"mitochondria": {
+			"name": "Mitochondrion",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 2,
+					"props": [
+						{
+							"id": "mitochondrial",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"endomembraneSystem": {
+			"name": "Interior Endomembrane System",
+			"certainContents": [
+				{
+					"id": "cnucleus",
+					"count": 1
+				},
+				{
+					"id": "er",
+					"count": 1
+				},
+				{
+					"id": "golgi",
+					"count": 1
+				}
+			],
+			"contentsCount": [4, 10],
+			"contents": [
+				{
+					"id": "lysosome",
+					"weight": 1
+				},
+				{
+					"id": "endosome",
+					"weight": 1
+				}
+			]
+		},
+		"cnucleus": {
+			"name": "Nucleus",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1,
+					"props": [
+						{
+							"id": "cnuclear",
+							"chance": 1
+						}
+					]
+				},
+				{
+					"id": "nucleolus",
+					"count": 1
+				}
+			],
+			"contentsCount": [5, 10],
+			"contents": [{ "id": "lamina", "weight": 1 }]
+		},
+		"nucleolus": {
+			"name": "Nucleolus",
+			"contentsCount": [20, 30],
+			"contents": [{ "id": "chromosome", "weight": 1 }]
+		},
+		"chromosome": {
+			"name": "Chromosome",
+			"contentsCount": [10, 20],
+			"contents": [{ "id": "gene", "weight": 1 }]
+		},
+		"gene": {
+			"name": "Gene",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "nucleotide",
+					"weight": 1,
+					"props": [
+						{
+							"id": "dnaa",
+							"chance": 0.25,
+							"excludes": "dnat dnac dnag"
+						},
+						{
+							"id": "dnat",
+							"chance": 0.33,
+							"excludes": "dnac dnag"
+						},
+						{
+							"id": "dnac",
+							"chance": 0.5,
+							"excludes": "dnag"
+						},
+						{
+							"id": "dnag",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"nucleotide": {
+			"name": "Nucleotide",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"lamina": {
+			"name": "Lamina",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "lamin",
+					"weight": 1
+				}
+			]
+		},
+		"lamin": {
+			"name": "Lamin",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"er": {
+			"name": "Endoplasmic Reticulum",
+			"certainContents": [
+				{
+					"id": "rougher",
+					"count": 1
+				},
+				{
+					"id": "smoother",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"rougher": {
+			"name": "Rough Endoplasmic Reticulum",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1
+				}
+			],
+			"contentsCount": [10, 15],
+			"contents": [
+				{
+					"id": "ribosome",
+					"weight": 1
+				}
+			]
+		},
+		"smoother": {
+			"name": "Smooth Endoplasmic Reticulum",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"ribosome": {
+			"name": "Ribosome",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"golgi": {
+			"name": "Golgi Apparatus",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"membrane": {
+			"name": "Membrane",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "lipid",
+					"weight": 10
+				},
+				{
+					"id": "liposome",
+					"weight": 10,
+					"if": "cytoplasmic"
+				},
+				{
+					"id": "gprot",
+					"weight": 10,
+					"if": "cytoplasmic"
+				}
+			]
+		},
+		"lipid": {
+			"name": "Lipid",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.5,
+							"excludes": "hydrogen oxygen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.75,
+							"excludes": "oxygen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"liposome": {
+			"name": "Liposome",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1,
+					"props": [
+						{
+							"id": "liposomal",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"lysosome": {
+			"name": "Lysosome",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1,
+					"props": [
+						{
+							"id": "lysosomal",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"endosome": {
+			"name": "Endosome",
+			"certainContents": [
+				{
+					"id": "membrane",
+					"count": 1,
+					"props": [
+						{
+							"id": "endosomal",
+							"chance": 1
+						}
+					]
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"gprot": {
+			"name": "G Protein",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"cytoskeleton": {
+			"name": "Cytoskeleton",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "microfilament",
+					"weight": 1
+				},
+				{
+					"id": "interfilament",
+					"weight": 1
+				}
+			]
+		},
+		"centrosome": {
+			"name": "Centrosome",
+			"certainContents": [
+				{
+					"id": "centriole",
+					"count": 2
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"centriole": {
+			"name": "Centriole",
+			"certainContents": [
+				{
+					"id": "microtubule",
+					"count": 13
+				}
+			],
+			"contentsCount": [0, 0]
+		},
+		"microfilament": {
+			"name": "Microfilament",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "myosin",
+					"weight": 1
+				}
+			]
+		},
+		"myosin": {
+			"name": "Myosin",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"interfilament": {
+			"name": "Intermediate Filament",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "myosin",
+					"weight": 1
+				}
+			]
+		},
+		"keratin": {
+			"name": "Keratin",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"microtubule": {
+			"name": "Microtubule",
+			"contentsCount": [5, 10],
+			"contents": [
+				{
+					"id": "tubulin",
+					"weight": 1
+				}
+			]
+		},
+		"tubulin": {
+			"name": "Tubulin",
+			"contentsCount": [10, 20],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "carbon",
+							"chance": 0.3,
+							"excludes": "hydrogen oxygen nitrogen"
+						},
+						{
+							"id": "hydrogen",
+							"chance": 0.4,
+							"excludes": "oxygen nitrogen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 0.5,
+							"excludes": "nitrogen"
+						},
+						{
+							"id": "nitrogen",
+							"chance": 1
+						}
+					]
+				}
+			]
+		},
+		"skeleton": {
+			"name": "Skeleton Piece",
+			"contentsCount": [10, 15],
+			"contents": [
+				{
+					"id": "bone",
+					"weight": 1
+				}
+			]
+		},
+		"bone": {
+			"name": "Bone",
+			"contentsCount": [20, 25],
+			"contents": [
+				{
+					"id": "atom",
+					"weight": 1,
+					"props": [
+						{
+							"id": "calcium",
+							"chance": 0.166,
+							"excludes": "phosphorus oxygen"
+						},
+						{
+							"id": "phosphorus",
+							"chance": 0.33,
+							"excludes": "oxygen"
+						},
+						{
+							"id": "oxygen",
+							"chance": 1
+						}
+					]
 				}
 			]
 		},
